@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body {
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+  font-size: 14px;
+}
+
+@media print {
+  html, body {
+      zoom: 88%;
+      margin: 0;
+  }
+}
+
+.pdf-border {
+    @apply border-2 border-gray-900;
+}
+
+.pdf-title {
+  @apply bg-primary p-4 font-bold text-center pdf-border;
+}
+
+.pdf-item {
+  @apply p-4 pdf-border;
+}
+
+.pdf-double-item {
+  @apply w-full flex;
+}
+
+.pdf-double-item :first-child {
+  @apply p-4 w-[70%] pdf-border;
+}
+  
+.pdf-double-item :last-child {
+    @apply p-4 w-[30%] pdf-border;
+}
+
+.form-field {
+  @apply w-full bg-[#212121] rounded-xl outline-gray-950 p-2 shadow-xl text-white;
+}
+
+button {
+  @apply p-2 bg-green-700 rounded-lg text-white;
+}
+
+.form-group {
+  @apply flex gap-2 items-end flex-wrap;
+}
+
