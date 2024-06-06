@@ -21,8 +21,10 @@ export default function Home() {
     const page = window.open(`/preview?${query}`, "_blank");
     if (!page) return;
 
-    page?.window.print();
     page.window.onafterprint = () => page?.close();
+    setTimeout(() => {
+      page?.window.print();
+    }, 500);
   }, []);
 
   return (
