@@ -107,9 +107,9 @@ export const PreviewInfo: React.FC<Props> = () => {
         <div>R$ {data?.total}</div>
       </div>
 
-      <div className="pdf-double-item">
-        <div>LOCAL E DATA: {`${data?.local} ${today}`}</div>
-        <div>ASSINATURA DO EMPRESÁRIO:</div>
+      <div className="pdf-double-item ">
+        <div className="items-center flex">LOCAL E DATA: {`${data?.local} ${today}`}</div>
+        <div>ASSINATURA DO EMPRESÁRIO:<br /><br /><br /></div>
       </div>
 
       <div className="pdf-item">
