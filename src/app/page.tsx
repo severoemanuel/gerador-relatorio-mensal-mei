@@ -128,7 +128,7 @@ export default function Home() {
           </div>
 
           <div className="pt-6 flex justify-end items-center">
-            <button type="submit">Enviar</button>
+            <button type="submit" className="btn w-full lg:w-auto">Enviar</button>
           </div>
         </Form>
       </div>
