@@ -28,7 +28,7 @@ export default function Home() {
   }, []);
 
   return (
-    <main className="flex h-full justify-center flex-wrap items-start bg-gray-800 overflow-hidden">
+    <main className="flex h-full justify-center flex-wrap items-start bg-gray-800 overflow-auto">
       <h1 className="text-2xl border-3 text-white w-full self-start pt-20 text-center">
         Preencha o formulário para o preenchimento do relatório mensal do MEI
       </h1>
