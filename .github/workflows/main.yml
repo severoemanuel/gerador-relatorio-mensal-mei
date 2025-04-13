@@ -29,4 +29,4 @@ jobs:
         run: vercel build --token=${{secrets.VERCEL_TOKEN}}
 
       - name: 🚀 Vercel Deploy
-        run: vercel deploy --prebuilt  --token=${{secrets.VERCEL_TOKEN}} --environment=production
+        run: vercel deploy --prebuilt  --token=${{secrets.VERCEL_TOKEN}}
