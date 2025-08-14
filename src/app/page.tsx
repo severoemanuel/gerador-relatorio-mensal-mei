@@ -30,7 +30,7 @@ export default function Home() {
   return (
     <main className="flex h-full justify-center flex-wrap items-start bg-gray-800 overflow-auto">
       <h1 className="text-2xl border-3 text-white w-full self-start pt-20 text-center">
-        Preencha o formulário para o preenchimento do relatório mensal do MEI
+        Preencha o formulário para o preenchimento do relatório mensal do MEI 2
       </h1>
 
       <div className="h-full w-full max-w-[600px] max-sm:px-4">
@@ -128,7 +128,9 @@ export default function Home() {
           </div>
 
           <div className="pt-6 flex justify-end items-center pb-8">
-            <button type="submit" className="btn w-full lg:w-auto">Enviar</button>
+            <button type="submit" className="btn w-full lg:w-auto">
+              Enviar
+            </button>
           </div>
         </Form>
       </div>
