@@ -1,16 +1,13 @@
-import { useSearchParams } from "next/navigation";
-import { useMemo } from "react";
 import { previewDataDto } from "~/helpers";
 
 interface Props {
   children?: React.ReactNode;
+  params: any;
 }
 
-export const PreviewInfo: React.FC<Props> = () => {
-  const query = Object.fromEntries(useSearchParams().entries());
+export const PreviewInfo: React.FC<Props> = ({ params }) => {
   const today = new Date().toLocaleString("pt-BR").slice(0, -10);
-
-  const data = previewDataDto(query)
+  const data = previewDataDto(params);
 
   return (
     <div
@@ -106,8 +103,15 @@ export const PreviewInfo: React.FC<Props> = () => {
       </div>
 
       <div className="pdf-double-item ">
-        <div className="items-center flex">LOCAL E DATA: {`${data?.local} ${today}`}</div>
-        <div>ASSINATURA DO EMPRESÁRIO:<br /><br /><br /></div>
+        <div className="items-center flex">
+          LOCAL E DATA: {`${data?.local} ${today}`}
+        </div>
+        <div>
+          ASSINATURA DO EMPRESÁRIO:
+          <br />
+          <br />
+          <br />
+        </div>
       </div>
 
       <div className="pdf-item">
@@ -126,4 +130,3 @@ export const PreviewInfo: React.FC<Props> = () => {
     </div>
   );
 };
-

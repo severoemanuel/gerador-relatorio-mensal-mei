@@ -22,9 +22,7 @@ export default function Home() {
     if (!page) return;
 
     page.window.onafterprint = () => page?.close();
-    setTimeout(() => {
-      page?.window.print();
-    }, 500);
+    page?.window.print();
   }, []);
 
   return (

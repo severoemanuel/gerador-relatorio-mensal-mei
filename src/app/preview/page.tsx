@@ -2,15 +2,17 @@ import { NextPage } from "next";
 import { Suspense } from "react";
 import { PreviewInfo } from "~/components/Preview/PreviewInfo";
 
-interface Props {}
+interface Props {
+  searchParams: { [key: string]: string | undefined };
+}
 
-const Preview: NextPage<Props> = () => {
+const Preview: NextPage<Props> = ({ searchParams }) => {
   return (
     <Suspense>
       <main className="h-full w-full preview-page">
         <div className="h-full w-full p-[50px]">
           <Suspense>
-            <PreviewInfo />
+            <PreviewInfo params={searchParams} />
           </Suspense>
         </div>
       </main>
