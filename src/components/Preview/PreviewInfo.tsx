@@ -1,5 +1,3 @@
-"use client";
-
 import { useSearchParams } from "next/navigation";
 import { useMemo } from "react";
 import { previewDataDto } from "~/helpers";
@@ -12,7 +10,7 @@ export const PreviewInfo: React.FC<Props> = () => {
   const query = Object.fromEntries(useSearchParams().entries());
   const today = new Date().toLocaleString("pt-BR").slice(0, -10);
 
-  const data = useMemo(() => previewDataDto(query), [query]);
+  const data = previewDataDto(query)
 
   return (
     <div
@@ -128,3 +126,4 @@ export const PreviewInfo: React.FC<Props> = () => {
     </div>
   );
 };
+
